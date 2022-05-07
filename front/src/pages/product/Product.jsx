@@ -46,6 +46,8 @@ const Product = () => {
   const [filterOption, setFilterOption] = useState('')
   const [filter, setFilter] = useState('')
   const [sort, setSort] = useState('price')
+
+  let [addedPrduct,setAddedProduct]=useState()
   
   
   if (filterVal.length > 0) {
@@ -88,14 +90,33 @@ const Product = () => {
       alert('quantity more than stock')
       return 
     }
+
+
     data = { ...data, quant: count }
     data = { ...data, amount: (data.quant * 1) * data.price }
 
+    setAddedProduct(false)
 
-    setCart([...cart, data])
+    cart.forEach(item => {
+      if(item._id===data._id)
+      {
+        addedPrduct=true
+        console.log(addedPrduct)
+        alert("product already added to cart")
+        
+       
+      }
+    });
+    console.log(addedPrduct)
+    if(!addedPrduct)
+    {
+      
+      setCart([...cart, data])
+      
+      alert(`${data.quant} ${data.name} has been added to cart`)
+    }
+
     
-    alert(`${data.quant} ${data.name} has been added to cart`)
-    val[index].quantity=data.quantity-count
     
 
   }
