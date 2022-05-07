@@ -45,8 +45,8 @@ const Product = () => {
   const [count, setCount] = useState(0)
   const [filterOption, setFilterOption] = useState('')
   const [filter, setFilter] = useState('')
-  const [sort, setSort] = useState('')
-  const [style,setStyle]=useState(false)
+  const [sort, setSort] = useState('price')
+
   
   if (filterVal.length > 0) {
     val = filterVal
@@ -123,7 +123,7 @@ const Product = () => {
 
             <input type="radio" name="price" value="price" defaultChecked onClick={sortHandler} />
             <label htmlFor="price">Low</label>
-            <input type="radio" name="price" value="-price " onClick={sortHandler} />
+            <input type="radio" name="price" value="-price" onClick={sortHandler} />
             <label htmlFor="price">High</label><br></br>
 
           </div>

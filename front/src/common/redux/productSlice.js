@@ -11,7 +11,7 @@ export const fetchProduct=createAsyncThunk('producr/fetchProduct',
          
          
 
-            const url = `http://localhost:8000/api/v1/products?${filterOption}=${filter}&sort=${sort}/`
+            const url = `http://localhost:8000/api/v1/products?sort=${sort}&${filterOption}=${filter}/`
          
           
           const token = localStorage.getItem('token')

@@ -11,7 +11,7 @@ const Home = () => {
   return (
     <div className='home'>
       <div className='sidebar'>
-        <Sidebar />
+        <Sidebar index={0} />
       </div>
       <div className="mainContainer">
 
