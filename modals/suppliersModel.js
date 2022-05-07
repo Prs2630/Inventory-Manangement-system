@@ -17,8 +17,10 @@ const supplierSchema=new mongoose.Schema({
 
     },
     phone:{
-        type:Number,
-        required:[true,"please provide phone number"]
+        type:String,
+        required:[true,"please provide phone number"],
+        minlength:[10,"phone number should be atleast 10 character long"],
+        maxlength:[10,"phone number should not be greater than 10 character "]
     },
     user:{
         type:mongoose.SchemaTypes.ObjectId,

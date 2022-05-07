@@ -8,7 +8,8 @@ const brandSchema=new mongoose.Schema({
     },
     brand:{
         type:String,
-        required:[true,"brand is required"]
+        required:[true,"brand is required"],
+        unique:[true,"brand already exist"]
     },
     category:{
         type:mongoose.SchemaTypes.ObjectId,

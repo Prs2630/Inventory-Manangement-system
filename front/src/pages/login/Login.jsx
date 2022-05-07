@@ -45,7 +45,7 @@ const Login = () => {
 
         <div className="login_input">
           <p className="login_heading">WELCOME TO INVENTOSHOP</p>
-            {error && <h1 style={{color:"red"}}>{error}</h1>}
+            {error && <h3 style={{color:"red"}}>{error}</h3>}
           <div className="login_input_input">
             <input type="email" name="email" placeholder='Email' value={sign.email} onChange={handleChange} />
           </div>

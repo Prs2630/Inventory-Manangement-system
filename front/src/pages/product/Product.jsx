@@ -43,6 +43,7 @@ const Product = () => {
   const [cart, setCart] = useState(cartData)
   
   const [count, setCount] = useState(0)
+
   const [filterOption, setFilterOption] = useState('')
   const [filter, setFilter] = useState('')
   const [sort, setSort] = useState('price')
@@ -81,6 +82,8 @@ const Product = () => {
   }
   const search = () => {
     dispatch(fetchProduct({ filterOption, filter, sort }))
+    
+    
   }
 
   const addToCart = (data,index) => {
@@ -89,6 +92,11 @@ const Product = () => {
     {
       alert('quantity more than stock')
       return 
+    }
+    if(count==0)
+    {
+      alert("please select the quantity")
+      return
     }
 
 
@@ -113,14 +121,14 @@ const Product = () => {
       
       setCart([...cart, data])
       
-      alert(`${data.quant} ${data.name} has been added to cart`)
+      alert(` ${data.name} has been added to cart`)
     }
 
     
     
 
   }
-  console.log(cart)
+  console.log(val)
 
 
   return (
@@ -196,7 +204,7 @@ const Product = () => {
                         <StyledTableCell align="center">{row.brand}</StyledTableCell>
                         <StyledTableCell align="center">{row.color}</StyledTableCell>
                         <StyledTableCell align="center">{row.size}</StyledTableCell>
-                        <StyledTableCell align="center"><input type="number" min='1' defaultValue={1}  max={row.quantity} onChange={(event) =>setCount(event.target.value)} /></StyledTableCell>
+                        <StyledTableCell align="center"><input type="number" min='1' defaultValue={0}  max={row.quantity} onChange={(event) =>setCount(event.target.value)} /></StyledTableCell>
 
 
 

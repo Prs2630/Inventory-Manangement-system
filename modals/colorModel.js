@@ -9,7 +9,8 @@ const colorSchema=new mongoose.Schema({
     color:{
         type:String,
         
-        required:[true,"please provide color"]
+        required:[true,"please provide color"],
+        unique:[true,"color already exist"]
     }
 })
 colorSchema.pre(/^find/,function(next){

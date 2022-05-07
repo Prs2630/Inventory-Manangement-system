@@ -8,7 +8,8 @@ const categorySchema=new mongoose.Schema({
     },
     category:{
         type:String,
-        required:[true,"category is required"]
+        required:[true,"category is required"],
+        unique:[true,"category already exist"]
     }
 })
 categorySchema.pre('save',function(next){

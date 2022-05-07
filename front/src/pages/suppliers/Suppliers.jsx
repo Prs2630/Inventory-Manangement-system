@@ -61,6 +61,7 @@ const Suppliers = () => {
   
   const changeHandler = (event) => {
     setData ( { ...data, [event.target.name]: event.target.value })
+    setError('')
   }
 
 //supplier data add to supplier
@@ -167,7 +168,7 @@ const updateSupplier=async (id) => {
           <div className="supplier_heading">
             <p>Suppliers Forum</p>
           </div>
-          {error && <p style={{color:"red"}}>{error}</p>}
+          {error && <h3 style={{color:"red"}}>{error}</h3>}
           <div className='supplier_add'>
             <button className='button' onClick={() => setModal(true)}>Add</button>
           </div>

@@ -36,7 +36,7 @@ const ForgetPassword = () => {
      exit={{height:window.innerHeight}}>
         <form className='forget_box' ref={ref} onSubmit={handleSubmit(submit)}>
             <h1 className='forget_heading'>Please provide the registered email address</h1>
-            {error && <p style={{color:"red"}}>{error}</p>}
+            {error && <h3 style={{color:"red"}}>{error}</h3>}
             <input {...register("email", { required: true, pattern: /^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$/ })} placeholder='Enter your register email address'/>
             {errors.email?.type === 'required' && "email is required"}
             {errors.email?.type === 'pattern' && "not valid email address"}

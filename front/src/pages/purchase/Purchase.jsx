@@ -43,6 +43,7 @@ const Purchase = () => {
 
   const handleChange = (event) => {
     setData({ ...data, [event.target.name]: event.target.value })
+    setError('')
   }
   console.log(data)
 
@@ -81,7 +82,7 @@ const Purchase = () => {
             <div className="purchaseHeading">
               <p>Add your product !</p>
             </div>
-            {error && <p style={{color:"red"}}>{error}</p>}
+            {error && <h3 style={{color:"red"}}>{error}</h3>}
             <input type="text" name='name' placeholder='Product Name' onChange={handleChange} />
             <input type="number" name='price' placeholder='Price' onChange={handleChange} />
             <input type="number" name='quantity' placeholder='Quantity' onChange={handleChange} />

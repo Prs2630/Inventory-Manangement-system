@@ -23,6 +23,7 @@ const CheckOut = ({ close, totalAmount, data }) => {
 
     const changeHandler = (event) => {
         setCustomer({ ...customer, [event.target.name]: event.target.value })
+        setError('')
 
 
     }
@@ -119,7 +120,7 @@ const CheckOut = ({ close, totalAmount, data }) => {
                     <div className="checkOut">
                         <p>Customer Details</p>
                     </div>
-                    {error && <p style={{color:"red"}}>{error}</p>}
+                    {error && <h3 style={{color:"red"}}>{error}</h3>}
                     <div className="customerForm">
                         <input type="text" placeholder='Enter your name...' name='name' required onChange={changeHandler} />
                         <input type="number" placeholder='Enter your contact number' name='phone' required onChange={changeHandler} />

@@ -8,7 +8,8 @@ const sizeSchema=new mongoose.Schema({
     size:{
         type:String,
         
-        required:[true,"please provide size"]
+        required:[true,"please provide size"],
+        unique:[true,"size already exist"]
     }
 })
 

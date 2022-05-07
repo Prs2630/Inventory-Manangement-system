@@ -21,10 +21,11 @@ const Signup = () => {
     try {
       const url = 'http://localhost:8000/api/v1/users/signup/'
       const response = await axios.post(url, data)
-      
+      console.log(response)
       navigate('/')
       
     } catch (err) {
+      console.log(err.response)
       setError(err.response.data.message)
      
     }

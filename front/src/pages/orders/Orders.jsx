@@ -90,10 +90,7 @@ const Orders = () => {
       </div>
       <div className="mainContainer">
         <div className="ordersMain">
-          {/* <div className="ordersImg">
-
-            <img  style={{width:"40%", height:"40%"}} src="https://images.unsplash.com/photo-1613652038578-a9a988b54a60?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80" alt="allorder" />
-          </div> */}
+          
 
           <div className="ordersHeading">
             <p>ORDERS LIST</p>
@@ -122,10 +119,10 @@ const Orders = () => {
               <Table sx={{ minWidth: 700 }} aria-label="simple table">
                 <TableHead>
                   <TableRow>
-                    <StyledTableCell align="center">id</StyledTableCell>
+                    
                     <StyledTableCell align="center">Customer</StyledTableCell>
                     <StyledTableCell align="center">Date Of Order</StyledTableCell>
-                    <StyledTableCell align="right">Total AMount</StyledTableCell>
+                    
                     <StyledTableCell align="right">Total product</StyledTableCell>
                     <StyledTableCell align="center">Details</StyledTableCell>
                     
@@ -137,10 +134,10 @@ const Orders = () => {
                       key={row._id}
                     >
                      
-                      <StyledTableCell align="center">{row._id}</StyledTableCell>
+                     
                       <StyledTableCell align="center">{row.customer.name}</StyledTableCell>
                       <StyledTableCell align="center">{row.orderDate}</StyledTableCell>
-                      <StyledTableCell align="center">{row.totalAmount}</StyledTableCell>
+               
                       <StyledTableCell align="center">{row.productDetails.length}</StyledTableCell>
                       <StyledTableCell align="center"><button className='details' onClick={()=>details(row.productDetails)}>Details</button></StyledTableCell>
                       

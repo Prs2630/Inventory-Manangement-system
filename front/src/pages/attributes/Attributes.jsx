@@ -18,6 +18,7 @@ const Attributes = () => {
   const categoryVal=useSelector(state=>state.attribute.category)
   const sizeVal=useSelector(state=>state.attribute.size)
   const brandVal=useSelector(state=>state.attribute.brand)
+  const [error,setError]=useState('')
   
   useEffect(()=>
   {

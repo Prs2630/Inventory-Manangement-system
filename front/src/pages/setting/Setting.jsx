@@ -24,6 +24,7 @@ const Setting = () => {
 
   const changeHandler = (event) => {
     setData({ ...data, [event.target.name]: event.target.value })
+    setError('')
   }
   console.log(data)
 
@@ -78,7 +79,7 @@ const Setting = () => {
             <hr />
 
           </div>
-          {error && <p style={{color:"red"}}>{error}</p>}
+          {error && <h3 style={{color:"red"}}>{error}</h3>}
           <div className='user_profile'>
             
 

@@ -11,7 +11,7 @@ export const fetchProduct=createAsyncThunk('producr/fetchProduct',
          
          
 
-            const url = `http://localhost:8000/api/v1/products?sort=${sort}&${filterOption}=${filter}/`
+            const url = `http://localhost:8000/api/v1/products?${filterOption}=${filter}&sort=${sort}`
          
           
           const token = localStorage.getItem('token')
@@ -39,21 +39,21 @@ export const fetchProductAll=createAsyncThunk('producr/fetchProductAll',
     async () => {
         try {
           
-          
           // filter=JSON.stringify(filter)
           const  url=`http://localhost:8000/api/v1/products`
           
           const token = localStorage.getItem('token')
-        
+          
           const response = await axios.get(url, {
             headers: {
               'Authorization': `Bearer ${token}`
+              
             }
             
-  
+            
           })
-         
-          console.log(response) 
+
+       
           
           return response.data.data
           

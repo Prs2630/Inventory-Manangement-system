@@ -44,7 +44,7 @@ const ResetPass = () => {
 
       <div className="reset_input">
         <p className="login_heading">RESET HERE</p>
-        {error && <p style={{color:"red"}}>{error}</p>}
+        {error && <h3 style={{color:"red"}}>{error}</h3>}
 
         <input type="text" name="token" placeholder='token here' onChange={resetKey} />
         <input type="text" name='password'  placeholder='new password' onChange={changeHandler}/>
