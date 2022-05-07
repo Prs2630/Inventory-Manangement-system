@@ -1,0 +1,48 @@
+.setting {
+  display: flex;
+}
+.title_profile {
+  font-family: 'Bebas Neue', cursive;
+  font-size: 3rem;
+  color: var(--color-blog);
+  margin-top: 2rem;
+  text-shadow: 1px 1px 5px;
+}
+
+.setting_main {
+  text-align: center;
+  box-sizing: content-box;
+  box-shadow: var(--box-shadow);
+ 
+
+ 
+ 
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  justify-content: center;
+  
+
+}
+.user_profile{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.2rem;
+  margin: 1rem;
+}
+.text>input{
+    margin-top: 1%;
+     width: 11vw;
+    display: inline-block;
+    margin-right: 60%;
+    margin-left: 32%;
+}
+
+.filds {
+  position: static;
+  font-size: 2rem;
+}

@@ -1,0 +1,26 @@
+.checkOut{
+   display: flex;
+   margin-bottom:3rem
+}
+.main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    .checkOut{
+        font-family: 'Bebas Neue', cursive;
+        font-size: 3rem;
+        color: var(--color-blog);
+        margin-top: 2rem;
+        text-shadow: 1px 1px 5px;
+    }
+   
+}
+.customerForm{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+}

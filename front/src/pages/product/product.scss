@@ -1,0 +1,39 @@
+.product{
+    display: flex;
+    box-sizing: border-box;
+}
+
+.productMain{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .productHeading{
+        p{
+            font-family: 'Bebas Neue', cursive;
+            font-size: 3rem;
+            color: var(--color-blog);
+            margin-top: 2rem;
+            text-shadow: 1px 1px 5px;
+        }
+    }
+
+    .productFilter{
+        display: flex;
+        gap: 2rem;
+        margin: 2rem;
+    }
+    .productSort{
+        margin-bottom:2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+    }
+    .productTable{
+        margin-top: 2rem;
+      box-shadow: var(--box-shadow);
+      
+    }
+}

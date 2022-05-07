@@ -1,0 +1,39 @@
+.signup {
+    padding: 2rem;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    color: white;
+    height: auto;
+    
+
+    .signup_here {
+
+        position: absolute;
+
+        top: 5vh;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        p{
+            font-size: 3rem;
+            font-weight: bolder;
+            font-family: 'Bebas Neue', cursive;
+            margin-bottom: 2rem;
+        }
+        .signup_form{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+
+    }
+}
