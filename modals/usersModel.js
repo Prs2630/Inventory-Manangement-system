@@ -25,7 +25,7 @@ const userSchema=new Schema({
     password:{
         type:String,
         required:[true,"password is necessary"],
-        select:false
+        select:false//bcz we dont want to show password
     },
     confirmPassword:{
         type:String,
@@ -64,7 +64,7 @@ const userSchema=new Schema({
 
 
 userSchema.pre("save",async function(next){
-    if(!this.isModified('password'))
+    if(!this.isModified('password'))//if password is not modified
     {
         return next()
     }
@@ -113,7 +113,7 @@ userSchema.methods.userForgetPassword=function(){
 
     this.forgetPasswordExpiry=Date.now() + 15*60*1000;
 
-    return token;
+    return token;//bcz we have to send this token via email
 
     
 }

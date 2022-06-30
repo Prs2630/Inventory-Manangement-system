@@ -4,7 +4,8 @@ exports.getAll=modal=>catchAsync(async(req,res,next)=>{
     
     const doc=await modal.find({user:{_id:req.currentUser.id}})
 
-    res.status(200).json({
+    res.status(200).json({//catchasync.js
+        
         status:"success",
         data:doc  
     })
